@@ -73,7 +73,7 @@ def cluster_texts(X_reduced, n_clusters):
     return clusters
 
 # --- Top Words for KMeans ---
-@st.cache_data
+# @st.cache_data
 def extract_top_words(df_result, n_clusters, top_n=20, _model=None):
     combined_stopwords = set(ENGLISH_STOP_WORDS).union(set(stopwords.words("english")))
     topics = []
@@ -108,7 +108,7 @@ def extract_top_words(df_result, n_clusters, top_n=20, _model=None):
     return pd.DataFrame(topics)
 
 # --- LDA Topic Modeling ---
-@st.cache_data
+# @st.cache_data
 def lda_topic_modeling(texts, n_topics=5):
     extra_stopwords = ['said', 'mr', 'just', 'like', 'new', 'time', 'year', 'years']
     cv = CountVectorizer(
@@ -352,5 +352,33 @@ if uploaded_file:
                 ax.set_title("Execution Time Comparison")
                 st.pyplot(fig)
 
-                st.write(f"**K-Means Time:** {kmeans_time:.2f} seconds")
-                st.write(f"**LDA Time:** {lda_time:.2f} seconds")
+                st.write(f"**K-Means Time:** {kmeans_time:.6f} seconds")
+                st.write(f"**LDA Time:** {lda_time:.6f} seconds")
+                
+            st.subheader("📥 Export Results")
+
+            col1, col2, col3 = st.columns(3)
+
+            with col1:
+                st.download_button(
+                    label="⬇️ Download K-Means Topics",
+                    data=topics_df.to_csv(index=False).encode('utf-8'),
+                    file_name="kmeans_topics.csv",
+                    mime="text/csv"
+                )
+
+            with col2:
+                st.download_button(
+                    label="⬇️ Download LDA Topics",
+                    data=lda_topics_df.to_csv(index=False).encode('utf-8'),
+                    file_name="lda_topics.csv",
+                    mime="text/csv"
+                )
+
+            with col3:
+                st.download_button(
+                    label="⬇️ Download Combined Results",
+                    data=df_result.to_csv(index=False).encode('utf-8'),
+                    file_name="combined_results.csv",
+                    mime="text/csv"
+                )
