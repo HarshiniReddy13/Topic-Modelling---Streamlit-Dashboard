@@ -1,7 +1,7 @@
 # Parallel Text Processor
 ### Accelerating NLP Workflows with Parallel Computing and Topic Modeling
 
-## 📘 Overview
+## Overview
 The **Parallel Text Processor** is a system designed to process large text datasets efficiently using **parallel processing** and **advanced NLP techniques**.  
 It compares traditional and modern topic modeling methods — **Latent Dirichlet Allocation (LDA)** and **K-Means with Sentence Embeddings** — and presents results in an **interactive Streamlit dashboard**.
 
