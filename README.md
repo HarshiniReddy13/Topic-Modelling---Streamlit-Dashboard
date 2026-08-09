@@ -1,4 +1,4 @@
-# 🧠 Parallel Text Processor
+# Parallel Text Processor
 ### Accelerating NLP Workflows with Parallel Computing and Topic Modeling
 
 ## 📘 Overview
@@ -7,7 +7,7 @@ It compares traditional and modern topic modeling methods — **Latent Dirichlet
 
 ---
 
-## 🚀 Features
+## Features
 - **Parallel Text Preprocessing**: Multi-core tokenization, lemmatization, and stopword removal using SpaCy and Python multiprocessing.  
 - **Text Modeling**: Implements both traditional (LDA) and modern (embedding-based K-Means) topic modeling techniques.  
 - **Efficient Vectorization**: Uses TF-IDF and CountVectorizer for feature extraction.  
@@ -17,7 +17,7 @@ It compares traditional and modern topic modeling methods — **Latent Dirichlet
 
 ---
 
-## 🧩 System Workflow
+## System Workflow
 1. **Upload Dataset** → Upload CSV or text data.  
 2. **Preprocessing** → Cleaning, lemmatizing, and tokenizing using SpaCy.  
 3. **Embedding Generation** → Semantic sentence embeddings with SentenceTransformer.  
@@ -27,7 +27,7 @@ It compares traditional and modern topic modeling methods — **Latent Dirichlet
 
 ---
 
-## ⚙️ Technologies Used
+## Technologies Used
 - **Programming Language**: Python  
 - **Libraries**: Streamlit, SpaCy, SentenceTransformer, Scikit-learn, UMAP, Matplotlib, Plotly  
 - **Parallelism**: Python Multiprocessing module  
@@ -35,14 +35,14 @@ It compares traditional and modern topic modeling methods — **Latent Dirichlet
 
 ---
 
-## 📊 Results
+## Results
 - Parallel preprocessing improved performance by up to **40–60%** compared to sequential execution.  
 - K-Means produced **semantically coherent topics**, while LDA offered **probabilistic interpretability**.  
 - Dashboard enables easy comparison of **model performance, topic clarity, and time efficiency**.
 
 ---
 
-## 🧠 Key Concepts
+## Key Concepts
 - **Parallelism in NLP**: Enables faster text processing by dividing tasks across CPU cores.  
 - **Embedding-based Clustering**: Uses transformer embeddings for meaning-driven topic grouping.  
 - **Probabilistic Topic Modeling**: LDA identifies latent topics through word distributions.  
